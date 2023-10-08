@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\fraturas_csharp.props" />
+</Project>
