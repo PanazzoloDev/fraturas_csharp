@@ -18,9 +18,9 @@ public class UsersController : ControllerBase
     }
 
     [HttpGet]
-    public ActionResult GetPaged(int pageNumber,int pageSize)
+    public ActionResult GetPaged(int pageNumber = 1, int pageSize = 50)
     {
-        return Ok(_service.GetPaged(pageNumber,pageSize));
+        return Ok(_service.GetPaged(pageNumber, pageSize));
     }
 
     [HttpGet("{id}")]
@@ -28,7 +28,7 @@ public class UsersController : ControllerBase
     {
         return Ok(_service.GetById(id));
     }
-    
+
     [HttpPost]
     public ActionResult Create(UserNewModel model)
     {
